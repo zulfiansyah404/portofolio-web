@@ -1,0 +1,94 @@
+[
+  {
+    "id": "pemilu-raya-km-itb-back-end-developer",
+    "category": "software-engineer",
+    "organization": "Pemilu Raya KM ITB",
+    "role": "Back-End Developer",
+    "period": "Jan. 2022",
+    "location": "Bandung, West Java",
+    "coverImage": null,
+    "descriptions": [
+      "Develop and learn how to create REST APIs that are optimal when accessed by millions of requests simultaneously with Golang.",
+      "Learning how to communicate well with fellow developers, both front-end and back-end."
+    ]
+  },
+  {
+    "id": "edusains-informatics-olympiad-bootcamp-tutor",
+    "category": "olympiad-tutor",
+    "organization": "Edusains",
+    "role": "Informatics Olympiad Bootcamp Tutor (OSK & OSP)",
+    "period": "June 2025 - Mei 2022",
+    "location": "Lembang, West Java",
+    "coverImage": null,
+    "descriptions": [
+      "Teaching any material that will be tested in city-level informatics olympiads, such as discrete mathematics and basic programming (C++).",
+      "Coached over 20 participants to qualify for the Provincial Level (OSP), with 3 advancing to the National Level (OSN)."
+    ]
+  },
+  {
+    "id": "sma-bpk-1-penabur-cirebon-informatics-olympiad-tutor",
+    "category": "olympiad-tutor",
+    "organization": "SMA BPK 1 Penabur Cirebon",
+    "role": "Informatics Olympiad Tutor (OSK)",
+    "period": "Mar. 2023 - Mar. 2024",
+    "location": "Cirebon, West Java",
+    "coverImage": null,
+    "descriptions": [
+      "Teaching any material that will be tested in city-level informatics olympiads, such as discrete mathematics and basic programming (C++).",
+      "More than 5 participants made it to the Provincial Level (OSP) and two of them won medals at the National Level (OSN)."
+    ]
+  },
+  {
+    "id": "sma-igs-palembang-informatics-olympiad-tutor",
+    "category": "olympiad-tutor",
+    "organization": "SMA Ignatius Global School Palembang (Yramawidya)",
+    "role": "Informatics Olympiad Tutor",
+    "period": "Aug. 2024",
+    "location": "Palembang, South Sumatra",
+    "coverImage": null,
+    "descriptions": [
+      "Delivered a 3-day introductory course covering essential topics for the Informatics Olympiad (OSN 2025).",
+      "Guided 3 participants to qualify for the provincial level, with one participant advancing to the National level and securing a Gold Medal."
+    ]
+  },
+  {
+    "id": "sma-bpk-1-penabur-bandung-informatics-olympiad-tutor",
+    "category": "olympiad-tutor",
+    "organization": "SMA BPK 1 Penabur Bandung",
+    "role": "Informatics Olympiad Tutor",
+    "period": "Sep. 2024 - June 2025",
+    "location": "Bandung, West Java",
+    "coverImage": null,
+    "descriptions": [
+      "Teaches various algorithmic strategies and data structures suitable for competitive programming.",
+      "Three participants made it to the provincial level (OSP)."
+    ]
+  },
+  {
+    "id": "sma-aloysius-1-bandung-informatics-olympiad-tutor",
+    "category": "olympiad-tutor",
+    "organization": "SMA Aloysius 1 Bandung",
+    "role": "Informatics Olympiad Tutor (OSP)",
+    "period": "Aug. 2025",
+    "location": "Bandung, West Java",
+    "coverImage": null,
+    "descriptions": [
+      "Mentored a participant for the Provincial Informatics Olympiad (OSP).",
+      "Delivered in-depth tutoring on advanced concepts to bridge knowledge gaps, specifically in Dynamic Programming and Bitmask.",
+      "The participant successfully advanced to the National level (OSN) and secured a Bronze Medal."
+    ]
+  },
+  {
+    "id": "markany-ganeshalt-bandung-software-engineer-intern",
+    "category": "software-engineer",
+    "organization": "MarkAny GaneshalT Bandung",
+    "role": "Software Engineer Intern",
+    "period": "Mar. 2025 - Aug. 2025",
+    "location": "Bandung, West Java",
+    "coverImage": null,
+    "descriptions": [
+      "Participated in the creation of a digital certification application using blockchain technology called Ecert24.",
+      "Developing an optimal REST API for CRUD needs on user data, documents, etc. using Prism and Express.Js."
+    ]
+  }
+]

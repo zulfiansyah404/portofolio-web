@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "LaTeX Math Portfolio"
+description = "A personal portfolio website for a competitive programmer and mathematician, presented like an elegant LaTeX research document with mathematical notation, problem-solving highlights, selected work, and a responsive modern reading experience."
+version = "1.0.0"
+id = "artifacts/latex-math-portfolio"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 18299
+
+[services.development]
+run = "pnpm --filter @workspace/latex-math-portfolio run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/latex-math-portfolio", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/latex-math-portfolio/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "18299"
+BASE_PATH = "/"
