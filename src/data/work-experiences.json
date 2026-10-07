@@ -5,6 +5,7 @@
     "organization": "Pemilu Raya KM ITB",
     "role": "Back-End Developer",
     "period": "Jan. 2022",
+    "start-time": "2022-01-01T00:00:00+07:00",
     "location": "Bandung, West Java",
     "coverImage": null,
     "descriptions": [
@@ -13,24 +14,40 @@
     ]
   },
   {
-    "id": "edusains-informatics-olympiad-bootcamp-tutor",
+    "id": "edusains-informatics-olympiad-bootcamp-tutor-2026",
     "category": "olympiad-tutor",
-    "organization": "Edusains",
-    "role": "Informatics Olympiad Bootcamp Tutor (OSK & OSP)",
-    "period": "June 2025 - Mei 2022",
+    "organization": "Bootcamp OSK Edusains",
+    "role": "Informatics Olympiad Tutor",
+    "period": "June. 2026",
+    "start-time": "2026-06-01T00:00:00+07:00",
     "location": "Lembang, West Java",
-    "coverImage": null,
+    "coverImage": "bootcamp-osk-2026-edusains.jpg",
     "descriptions": [
-      "Teaching any material that will be tested in city-level informatics olympiads, such as discrete mathematics and basic programming (C++).",
-      "Coached over 20 participants to qualify for the Provincial Level (OSP), with 3 advancing to the National Level (OSN)."
+      "Teaching any material that will be tested in city-level informatics olympiads, such as discrete mathematics and basic programming (C++)."
+    ]
+  },
+    {
+    "id": "sma-bpk-1-penabur-cirebon-informatics-olympiad-tutor-2026",
+    "category": "olympiad-tutor",
+    "organization": "SMA BPK 1 Penabur Cirebon (by Edusains)",
+    "role": "Informatics Olympiad Tutor (OSP)",
+    "period": "July. 2026",
+    "start-time": "2026-07-01T00:00:00+07:00",
+    "location": "Cirebon, West Java",
+    "coverImage": "sma-bpk-1-penabur-cirebon-2026/cover.jpg",
+    "descriptions": [
+      "Teaching introductory competitive programming material to participants, including basic algorithms and data structures.",
+      "Guiding participants to prepare for the provincial-level programming competition (OSP)."
+      
     ]
   },
   {
     "id": "sma-bpk-1-penabur-cirebon-informatics-olympiad-tutor",
     "category": "olympiad-tutor",
-    "organization": "SMA BPK 1 Penabur Cirebon",
+    "organization": "SMA BPK 1 Penabur Cirebon (by Edusains)",
     "role": "Informatics Olympiad Tutor (OSK)",
-    "period": "Mar. 2023 - Mar. 2024",
+    "period": "Mar. 2023",
+    "start-time": "2023-03-01T00:00:00+07:00",
     "location": "Cirebon, West Java",
     "coverImage": null,
     "descriptions": [
@@ -41,11 +58,12 @@
   {
     "id": "sma-igs-palembang-informatics-olympiad-tutor",
     "category": "olympiad-tutor",
-    "organization": "SMA Ignatius Global School Palembang (Yramawidya)",
+    "organization": "SMA Ignatius Global School Palembang (by Yramawidya)",
     "role": "Informatics Olympiad Tutor",
     "period": "Aug. 2024",
+    "start-time": "2024-08-01T00:00:00+07:00",
     "location": "Palembang, South Sumatra",
-    "coverImage": null,
+    "coverImage": "sma-igs-palembang-2024/1.jpg",
     "descriptions": [
       "Delivered a 3-day introductory course covering essential topics for the Informatics Olympiad (OSN 2025).",
       "Guided 3 participants to qualify for the provincial level, with one participant advancing to the National level and securing a Gold Medal."
@@ -57,8 +75,9 @@
     "organization": "SMA BPK 1 Penabur Bandung",
     "role": "Informatics Olympiad Tutor",
     "period": "Sep. 2024 - June 2025",
+    "start-time": "2024-09-01T00:00:00+07:00",
     "location": "Bandung, West Java",
-    "coverImage": null,
+    "coverImage": "smak-penabur-bandung-1-2025/cover.jpg",
     "descriptions": [
       "Teaches various algorithmic strategies and data structures suitable for competitive programming.",
       "Three participants made it to the provincial level (OSP)."
@@ -67,15 +86,30 @@
   {
     "id": "sma-aloysius-1-bandung-informatics-olympiad-tutor",
     "category": "olympiad-tutor",
-    "organization": "SMA Aloysius 1 Bandung",
+    "organization": "SMA Aloysius 1 Bandung (by Wahana Pengetahuan)",
     "role": "Informatics Olympiad Tutor (OSP)",
-    "period": "Aug. 2025",
+    "period": "July 2026",
+    "start-time": "2026-07-01T00:00:00+07:00",
     "location": "Bandung, West Java",
-    "coverImage": null,
+    "coverImage": "sma-aloysius-1-bandung-2026/cover.png",
+    "descriptions": [
+      "Mentored two participants for the Provincial Informatics Olympiad (OSP).",
+      "Delivered in-depth tutoring on advanced concepts to bridge knowledge gaps, specifically in Dynamic Programming and Bitmask.",
+      "One participant successfully advanced to the National level (OSN) and secured a Silver Medal."
+    ]
+  },
+  {
+    "id": "sma-pu-albayan-osp2026",
+    "category": "olympiad-tutor",
+    "organization": "SMA PU Albayan (by Faza Learning)",
+    "role": "Informatics Olympiad Tutor (OSP)",
+    "period": "Aug. 2026",
+    "start-time": "2026-08-01T00:00:00+07:00",
+    "location": "Cilegon, Banten",
+    "coverImage": "sma-pu-albayan-osp2026/cover.jpg",
     "descriptions": [
       "Mentored a participant for the Provincial Informatics Olympiad (OSP).",
-      "Delivered in-depth tutoring on advanced concepts to bridge knowledge gaps, specifically in Dynamic Programming and Bitmask.",
-      "The participant successfully advanced to the National level (OSN) and secured a Bronze Medal."
+      "Delivered in-depth tutoring on advanced concepts to bridge knowledge gaps, specifically in Dynamic Programming and Bitmask."
     ]
   },
   {
@@ -84,11 +118,69 @@
     "organization": "MarkAny GaneshalT Bandung",
     "role": "Software Engineer Intern",
     "period": "Mar. 2025 - Aug. 2025",
+    "start-time": "2025-03-01T00:00:00+07:00",
     "location": "Bandung, West Java",
     "coverImage": null,
     "descriptions": [
       "Participated in the creation of a digital certification application using blockchain technology called Ecert24.",
       "Developing an optimal REST API for CRUD needs on user data, documents, etc. using Prism and Express.Js."
+    ]
+  },
+  {
+    "id": "pos-seadoosafarisamosir",
+    "category": "software-engineer",
+    "organization": "Seadoo Safari Samosir",
+    "role": "Fullstack Developer (Freelance)",
+    "period": "Aug. 2026",
+    "start-time": "2026-08-01T00:00:00+07:00",
+    "location": "Samosir, North Sumatra",
+    "coverImage": "pos-seadoosafarisamosir/cover.png",
+    "descriptions": [
+      "Assisted in the development of a web application for managing safari tours.",
+      "Implemented features for booking management and customer interaction using modern web technologies."
+    ]
+  },
+  {
+    "id": "sman-71-61-jakarta-osk-2026",
+    "category": "olympiad-tutor",
+    "organization": "SMAN 71 & 61 Jakarta (by Science Go)",
+    "role": "Informatics Olympiad Tutor (OSK)",
+    "period": "Feb. 2026",
+    "start-time": "2026-02-01T00:00:00+07:00",
+    "location": "Jakarta, Indonesia",
+    "coverImage": "sman-71-61-jakarta-osk-2026/cover.png",
+    "descriptions": [
+      "Mentored participants for the City-level Informatics Olympiad (OSK).",
+      "Provided guidance on problem-solving strategies and advanced programming concepts."
+    ]
+  },
+  {
+    "id": "sman-6-tangsel-osk-2026",
+    "category": "olympiad-tutor",
+    "organization": "SMAN 6 Tangerang Selatan",
+    "role": "Informatics Olympiad Tutor (OSK)",
+    "period": "Feb. 2026",
+    "start-time": "2026-02-01T00:00:00+07:00",
+    "location": "Tangerang Selatan, Banten",
+    "coverImage": "sman-6-tangsel-osk-2026/cover.png",
+    "descriptions": [
+      "Mentored participants for the City-level Informatics Olympiad (OSK).",
+      "Provided guidance on problem-solving strategies and advanced programming concepts."
+    ]
+  },
+  {
+    "id": "sman-3-bandung-osk2025",
+    "category": "olympiad-tutor",
+    "organization": "SMAN 3 Bandung (by Next Level Study)",
+    "role": "Informatics Olympiad Tutor (OSK)",
+    "period": "Feb. 2025",
+    "start-time": "2025-02-01T00:00:00+07:00",
+    "location": "Bandung, West Java",
+    "coverImage": "sman-3-bandung-osk2025/cover.png",
+    "descriptions": [
+      "Mentored participants for the City-level Informatics Olympiad (OSK).",
+      "Provided guidance on problem-solving strategies and advanced programming concepts.",
+      "Two participants from this batch advanced to the provincial level of the Informatics Olympiad."
     ]
   }
 ]

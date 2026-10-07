@@ -2,7 +2,11 @@ import { type FormEvent, type ReactNode, useState } from 'react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ArrowDownRight, ArrowUpRight, Check, Copy, Github, Menu, Search, X } from 'lucide-react';
 import { ErrorBoundary } from '@/components/error-boundary';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
+import { Input } from '@/components/ui/input';
 import { Toaster } from '@/components/ui/toaster';
+import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group';
 import { TooltipProvider } from '@/components/ui/tooltip';
 import NotFound from '@/pages/not-found';
 import { Route, Switch, useLocation, Router as WouterRouter } from 'wouter';
@@ -11,7 +15,7 @@ import workExperienceData from './data/work-experiences.json';
 
 const queryClient = new QueryClient();
 const email = 'hello@eliasnovak.dev';
-const experiencePageSize = 3;
+const experiencePageSize = 4;
 const experienceCategories = [
   { id: 'olympiad-tutor', label: 'Olympiad Tutor' },
   { id: 'software-engineer', label: 'Software Engineer' },
@@ -44,23 +48,28 @@ function Home() {
 
   const closeMenu = () => setMenuOpen(false);
   const normalizedExperienceSearch = experienceSearch.trim().toLowerCase();
-  const filteredExperiences = workExperienceData.filter((experience) => {
-    if (experience.category !== activeExperienceCategory) return false;
-    if (!normalizedExperienceSearch) return true;
+  const sortedExperiences = workExperienceData
+    .filter((experience) => {
+      if (experience.category !== activeExperienceCategory) return false;
+      if (!normalizedExperienceSearch) return true;
 
-    return [
-      experience.organization,
-      experience.role,
-      experience.period,
-      experience.location,
-      ...experience.descriptions,
-    ].some((value) => value.toLowerCase().includes(normalizedExperienceSearch));
-  });
+      return [
+        experience.organization,
+        experience.role,
+        experience.period,
+        experience.location,
+        ...experience.descriptions,
+      ].some((value) => value.toLowerCase().includes(normalizedExperienceSearch));
+    })
+    .sort(
+      (first, second) =>
+        Date.parse(second['start-time']) - Date.parse(first['start-time']),
+    );
   const experiencePageCount = Math.max(
     1,
-    Math.ceil(filteredExperiences.length / experiencePageSize),
+    Math.ceil(sortedExperiences.length / experiencePageSize),
   );
-  const visibleExperiences = filteredExperiences.slice(
+  const visibleExperiences = sortedExperiences.slice(
     (experiencePage - 1) * experiencePageSize,
     experiencePage * experiencePageSize,
   );
@@ -179,8 +188,9 @@ function Home() {
           <div className="experience-controls">
             <label className="experience-search">
               <Search size={16} aria-hidden="true" />
-              <input
+              <Input
                 type="search"
+                className="experience-search-input"
                 value={experienceSearch}
                 onChange={(event) => {
                   setExperienceSearch(event.target.value);
@@ -191,30 +201,40 @@ function Home() {
                 data-testid="input-experience-search"
               />
             </label>
-            <div className="experience-filters" aria-label="Filter experiences by category">
+            <ToggleGroup
+              type="single"
+              value={activeExperienceCategory}
+              variant="outline"
+              aria-label="Filter experiences by category"
+              className="experience-filters"
+              onValueChange={(value) => {
+                const category = experienceCategories.find(
+                  (item) => item.id === value,
+                );
+                if (!category) return;
+                setActiveExperienceCategory(category.id);
+                setExperiencePage(1);
+              }}
+            >
               {experienceCategories.map((category) => (
-                <button
+                <ToggleGroupItem
                   key={category.id}
-                  type="button"
-                  className={`experience-filter ${activeExperienceCategory === category.id ? 'active' : ''}`}
-                  aria-pressed={activeExperienceCategory === category.id}
-                  onClick={() => {
-                    setActiveExperienceCategory(category.id);
-                    setExperiencePage(1);
-                  }}
+                  value={category.id}
+                  className="experience-filter"
                   data-testid={`button-category-${category.id}`}
                 >
                   {category.label}
-                </button>
+                </ToggleGroupItem>
               ))}
-            </div>
+            </ToggleGroup>
           </div>
           {visibleExperiences.length > 0 ? (
             <div className="experience-cards">
               {visibleExperiences.map((experience) => (
-                <article
+                <Card
                   className="experience-card"
                   key={experience.id}
+                  role="article"
                   data-testid={`card-experience-${experience.id}`}
                 >
                   <div className="experience-cover">
@@ -224,7 +244,7 @@ function Home() {
                       <span>IMAGE COVER</span>
                     )}
                   </div>
-                  <div className="experience-card-content">
+                  <CardContent className="experience-card-content">
                     <h3>{experience.organization}</h3>
                     <p className="experience-card-role">
                       {experience.role} ({experience.period})
@@ -240,8 +260,8 @@ function Home() {
                         </ul>
                       </div>
                     </details>
-                  </div>
-                </article>
+                  </CardContent>
+                </Card>
               ))}
             </div>
           ) : (
@@ -250,18 +270,18 @@ function Home() {
             </p>
           )}
           <div className="experience-pagination" aria-label="Experience pages">
-            <button
-              type="button"
+            <Button
+              variant="outline"
               className="experience-page-control"
               onClick={() => setExperiencePage((page) => Math.max(1, page - 1))}
               disabled={experiencePage === 1}
               data-testid="button-experience-previous"
             >
               Prev
-            </button>
+            </Button>
             {Array.from({ length: experiencePageCount }, (_, index) => index + 1).map((page) => (
-              <button
-                type="button"
+              <Button
+                variant="outline"
                 key={page}
                 className={`experience-page-number ${experiencePage === page ? 'active' : ''}`}
                 aria-current={experiencePage === page ? 'page' : undefined}
@@ -269,17 +289,17 @@ function Home() {
                 data-testid={`button-experience-page-${page}`}
               >
                 {page}
-              </button>
+              </Button>
             ))}
-            <button
-              type="button"
+            <Button
+              variant="outline"
               className="experience-page-control"
               onClick={() => setExperiencePage((page) => Math.min(experiencePageCount, page + 1))}
               disabled={experiencePage === experiencePageCount}
               data-testid="button-experience-next"
             >
               Next
-            </button>
+            </Button>
           </div>
         </section>
 
